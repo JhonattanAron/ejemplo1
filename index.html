@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="accion.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="login-form">
+    <form>
+      <h1>INICIA SESION</h1>
+      <input id="usuario" type="text" placeholder="Email or Phone">
+      <input id="pass" type="password" placeholder="Password">
+      <button id="submit" type="submit">Log In</button>
+    </form>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const textBox1 = document.getElementById("usuario");
+  const textBox2 = document.getElementById("pass");
+  const button = document.getElementById("submit");
+  let data = [];
+
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    data.push(textBox1.value);
+    data.push(textBox2.value);
+    console.log(data);
+  });
+});
+  </script>  
+</body>
+</html>
